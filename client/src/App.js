@@ -5,7 +5,7 @@ import Create from './views/CreatePokemon/CreatePokemon';
 import Detail from './views/Detail/Detail';
 import About from './views/About/About';
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://pokemon-deploy-production.up.railway.app/';
 
 function App() {
   return (
