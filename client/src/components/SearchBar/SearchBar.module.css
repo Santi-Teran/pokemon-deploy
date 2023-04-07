@@ -1,0 +1,89 @@
+.mainContainer {
+    height: 85.7vh;
+    font-family: 'Exo2-Regular';
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.searchContainer input {
+    font-family: 'Exo2-Regular';
+    width: 93.6%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    color: white;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+.searchContainer button {
+display: none;
+}
+
+.filterContainer {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.select {
+    font-size: 16px;
+    margin: 20px 10px;
+}
+.select select{
+    width: 100%;
+    font-family: 'Exo2-Regular';
+    font-size: 16px;
+    background-color: rgb(237, 28, 36);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: height 3s ease;
+}
+.select button{
+    font-family: 'Exo2-Regular';
+    width: 49%;
+    margin: 0.5%;
+    border: none;
+    padding: 10px;
+    background-color: rgb(237, 28, 36);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.select button:hover {
+    background-color: rgb(124, 13, 17);
+}
+
+.leftButton{
+    border-radius: 20px 0 0 20px;
+}
+.rightButton{
+    border-radius: 0 20px 20px 0;
+}
+
+.but {
+    font-family: 'Exo2-Regular';
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 15px;
+    margin-top: 40px;
+    border: none;
+    background-color: rgb(237, 28, 36);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.but:hover {
+    background-color: rgb(124, 13, 17);
+}
+

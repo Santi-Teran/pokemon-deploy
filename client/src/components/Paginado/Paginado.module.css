@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.li {
+  margin: 0 5px;
+}
+
+.li button {
+  font-family: 'Exo2-Regular';
+  font-weight: 900;
+  background-color: #f2f2f2;
+  border: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.li button:hover {
+  background-color: rgb(237, 28, 36);
+  color: #fff;
+}
+
+.activeButton {
+  background-color: rgb(237, 28, 36);
+  color: #fff;
+}

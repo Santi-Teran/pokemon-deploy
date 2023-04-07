@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Exo2-Regular;
+    margin: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.about {
+    width: 33%;
+    padding: 0 100px;
+}
+.link{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.info {
+    width: 33%;
+    padding: 0 100px;
+
+}
+
+.redes {
+    width: 33%;
+    padding: 0 100px;
+}
+.redes li {
+    list-style: none;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+}
+

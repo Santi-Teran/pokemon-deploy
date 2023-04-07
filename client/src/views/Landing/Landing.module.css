@@ -1,0 +1,29 @@
+.container {
+    background-image: url('../../images/pokemon.jpg');
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    height: 100vh;
+}
+
+.image {
+    width: 30vw;
+    margin: 100px;
+}
+
+.button {
+    font-family: Exo2-Regular;
+    font-size: 1vw;
+    font-weight:bold;
+    padding: 1vw 2vw;
+    border-radius: 4vw;
+    background-color: rgb(255, 203, 5, 0.5);
+    border: 4px solid rgb(0, 101, 233);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: rgb(255, 203, 5);
+}

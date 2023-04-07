@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.navBar {
+    width: 100%;
+    text-align: center;
+  }
+  
+.searchBar {
+    flex-basis: 20%;
+  }
+  
+.cardsContainer {
+    flex-basis: 80%;
+  }
+
+.footer {
+  width: 100%;
+}

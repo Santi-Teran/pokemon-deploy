@@ -1,0 +1,81 @@
+body {
+    background-image: url(../../images/pokeballs.jpg);
+    background-size: cover;
+}
+
+.mainContainer {
+    width: 50%;
+    font-family: Exo2-Regular;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0);
+    border-radius: 0px 40px 0px 40px;
+    background-color: rgb(255, 255, 255);    
+}
+.mainContainer button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Exo2-Regular';
+    font-weight: 900;
+    margin: 20px 0 0 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.mainContainer button:hover {
+    background-color: rgb(124, 13, 17);
+    color: #fff;
+}
+
+.firstContainer {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 600px;
+}
+.firstContainer h2 {
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    margin: 10px;
+}
+.firstContainer ul {
+    display: flex;
+    margin: 0 40px;
+    padding: 0;
+    list-style: none;
+}
+.firstContainer li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 20px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    border-radius: 20px;
+}
+.firstContainer img {
+    margin: -60px;
+}
+
+.secondContainer {
+    width: 500px;
+    height: 600px;
+    
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 40px;
+}
+.stats p {
+    width: 8em;
+    margin-right: 10px;
+}
+
