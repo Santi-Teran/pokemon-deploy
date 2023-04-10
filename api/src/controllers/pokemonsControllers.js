@@ -49,7 +49,7 @@ const getPokemonById = async(id) => {
     return pokemonId;
 };
 
-const createPokemon = async(name, image, hp, attack, defense, speed, height, weight, created, types) => {
+const createPokemon = async(name, image, hp, attack, specialAttack, defense, specialDefense, speed, height, weight, created, types) => {
     let typeDb = await Type.findAll({
         where: { name: types }
     });
