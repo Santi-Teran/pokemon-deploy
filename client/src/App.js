@@ -5,6 +5,7 @@ import Create from './views/CreatePokemon/CreatePokemon';
 import Detail from './views/Detail/Detail';
 import About from './views/About/About';
 import axios from 'axios';
+import Favorites from './views/Favorites/Favorites';
 axios.defaults.baseURL = 'https://pokemon-deploy-production.up.railway.app/';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/about' component={About} />
         <Route path='/detail/:id' component={Detail} />
         <Route path='/create' component={Create} />
+        <Route path='/favorites' component={Favorites} />
       </Switch>
     </BrowserRouter>
   );
