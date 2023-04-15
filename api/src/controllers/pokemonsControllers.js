@@ -70,4 +70,11 @@ const createPokemon = async(name, image, hp, attack, specialAttack, defense, spe
     return pokemonCreated;
 };
 
-module.exports = { getAllPokemons, getPokemonById, createPokemon };
+const deletePokemonById = async(id) => {
+    const pokemon = await Pokemon.findOne({
+        where: { id: id }
+    });
+    return await pokemon.destroy();
+};
+
+module.exports = { getAllPokemons, getPokemonById, createPokemon, deletePokemonById };
