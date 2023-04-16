@@ -36,7 +36,7 @@ export const Favorites = ({ myFavorites, props}) => {
 
 const mapStateToProps = (state) => {
   return {
-    filteredFavorites: state.filteredFavorites,
+    myFavorites: state.myFavorites,
   };
 };
 
