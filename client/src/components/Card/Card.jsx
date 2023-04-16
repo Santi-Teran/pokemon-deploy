@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addFavorites, deleteFavorites } from '../../redux/action.js';
+import { addFavorites, deleteFavorites } from '../../redux/actions';
 import style from './Card.module.css';
 
 export const Card = ({ name, image, types, id }) =>{
