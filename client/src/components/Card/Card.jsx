@@ -5,6 +5,7 @@ import { addFavorites, deleteFavorites } from '../../redux/actions';
 import style from './Card.module.css';
 
 export const Card = ({ name, image, types, id }, props) =>{
+    console.log(props)
 
     const defaultClass = style.container;
     const typeClasses = types.reduce((classes, type) => {
