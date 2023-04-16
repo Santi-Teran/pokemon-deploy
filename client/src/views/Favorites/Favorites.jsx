@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import NavBar from '../../components/NavBar/NavBar';
-import Card from '../../componentsCard/Card';
+import Card from '../../components/Card/Card';
 import style from './Favorites.module.css';
 
 export const Favorites = ({ myFavorites, props}) => {
