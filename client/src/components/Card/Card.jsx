@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { addFavorites, deleteFavorites } from '../../redux/actions';
 import style from './Card.module.css';
 
-export const Card = ({ name, image, types, id }) =>{
+export const Card = ({ name, image, types, id }, props) =>{
 
     const defaultClass = style.container;
     const typeClasses = types.reduce((classes, type) => {
