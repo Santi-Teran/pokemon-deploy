@@ -1,3 +1,3 @@
 const favs = [];
 
-export default favs;
+module.exports = favs;
