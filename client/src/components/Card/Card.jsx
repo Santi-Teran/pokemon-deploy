@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { addFavorites, deleteFavorites } from '../../redux/actions';
 import style from './Card.module.css';
 
-export const Card = ({ name, image, types, id }, props) =>{
-    console.log(props)
+export const Card = ({ name, image, types, id, myFavorites, addFavorites, deleteFavorites, onClose }) => {
 
     const defaultClass = style.container;
     const typeClasses = types.reduce((classes, type) => {
@@ -16,19 +15,20 @@ export const Card = ({ name, image, types, id }, props) =>{
 
     const [ isFav, setIsFav ] = useState(false)
     useEffect(() => {
-       props.myFavorites.forEach((fav) => {
-          if (fav.id === props.id) {
+       myFavorites.forEach((fav) => {
+          if (fav.id === id) {
              setIsFav(true);
           }
        });
-    }, [props.myFavorites, props.id]);
+    }, [myFavorites, id]);
+
     const handleFavorite = () => {
        if (isFav) {
           setIsFav(false);
-          props.deleteFavorites(props.id);
+          deleteFavorites(id);
        } else {
           setIsFav(true);
-          props.addFavorites({ ...props });
+          addFavorites({ name, image, types, id });
        }
     };
 
@@ -39,7 +39,7 @@ export const Card = ({ name, image, types, id }, props) =>{
                     (<button onClick={handleFavorite}>❤️</button>) : 
                     (<button onClick={handleFavorite}>🤍</button>)
                 }
-                <button onClick={props.onClose}>❌</button>
+                <button onClick={onClose}>❌</button>
             </div>
             <h3>{name}</h3>
             <div className={style.types}>
