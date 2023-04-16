@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import NavBar from '../../components/NavBar/NavBar';
 import Card from '../../components/Card/Card';
 import style from './Favorites.module.css';
 import { getTypes } from "../../redux/actions";
 
-export const Favorites = ({ myFavorites }) => {
+export const Favorites = () => {
   const dispatch = useDispatch();
+
+  const myFavorites = useSelector((state) => state.myFavorites)
 
   useEffect(() => {
     dispatch(getTypes());
