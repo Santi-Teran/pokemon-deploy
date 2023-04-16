@@ -4,7 +4,12 @@ import NavBar from '../../components/NavBar/NavBar';
 import Card from '../../components/Card/Card';
 import style from './Favorites.module.css';
 
-export const Favorites = ({ myFavorites, props}) => {
+export const Favorites = ({ myFavorites }) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getTypes());
+}, [dispatch]);
 
   return (
     <div>
@@ -12,21 +17,8 @@ export const Favorites = ({ myFavorites, props}) => {
         <div className={style.mainContainer}>
             <h2>Favorites</h2>
             <div className={style.cards}>
-              {myFavorites.map((character) => (
-                <Card className={style.card}
-                  key={character.id}
-                  id= {character.id} 
-                  name= {character.name} 
-                  hp= {character.hp} 
-                  attack= {character.attack} 
-                  specialAttack= {character.specialAttack}
-                  defense= {character.defense} 
-                  specialDefense= {character.specialDefense} 
-                  speed= {character.speed} 
-                  height= {character.height} 
-                  weight= {character.weight}  
-                  onClose= {() => props.onClose(character.id)}
-               /> ))
+              {myFavorites.map((data) => (
+                <Card className={style.card} key={data.id} name={data.name.toUpperCase()} image={data.image} types={data.types} id={data.id}/> ))
          }
       </div>
         </div>
