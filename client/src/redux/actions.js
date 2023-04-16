@@ -4,6 +4,9 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 export const GET_POKEMON = 'GET_POKEMON';
 export const GET_POKEMON_BY_NAME = 'GET_POKEMON_BY_NAME';
 export const GET_TYPES = 'GET_TYPES';
+export const GET_FAVORITES = "GET_FAVORITES";
+export const ADD_FAVORITES = "ADD_FAVORITE";
+export const DELETE_FAVORITES = "DELETE_FAVORITE";
 export const CREATE_POKEMON = 'CREATE_POKEMON';
 export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
 export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
@@ -54,6 +57,31 @@ export const getTypes = () => {
     };
 };
 
+export const getFavorites = () => {
+    return async function(dispatch) {
+        const json = await axios.get("/favorites");
+
+        dispatch({
+            type: GET_FAVORITES,
+            payload: json.data
+        })
+    }
+};
+
+export const addFavorites = (pokemon) => {
+    return {
+        type: ADD_FAVORITES,
+        payload: pokemon,
+    };
+};
+  
+export const deleteFavorites = (id) => {
+    return {
+        type: DELETE_FAVORITES,
+        payload: id,
+    };
+};
+
 export const CreatePokemon = (payload) => {
     return async function(dispatch) {
         const response = await axios.post("/pokemons", payload);
@@ -62,7 +90,6 @@ export const CreatePokemon = (payload) => {
     }
     
 };
-
 
 export const filterByOrigin = (origin) => {
     return {

@@ -5,6 +5,7 @@ const initialState = {
     pokemon: [],
     types: [],
     allPokemons: [],
+    myFavorites: [],
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -32,6 +33,24 @@ const rootReducer = (state = initialState, { type, payload }) => {
             return { 
                 ...state, 
                 types: payload 
+            }
+        }
+        case GET_FAVORITES: {
+            return {
+                ...state,
+                myFavorites: payload,
+            }
+        }
+        case ADD_FAVORITES: {
+            return {
+                ...state,
+                myFavorites: [...state.myFavorites, payload],
+            }
+        }
+        case DELETE_FAVORITES: {
+            return {
+                ...state,
+                myFavorites: state.myFavorites.filter((card) => card.id !== payload),
             }
         }
         case CREATE_POKEMON: {
